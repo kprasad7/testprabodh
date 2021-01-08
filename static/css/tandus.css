@@ -1,0 +1,34 @@
+
+#banner
+{
+
+  background: #9900ff;
+  
+
+}
+.oo
+{
+    background-image: linear-gradient(to right,  #9900ff, #9900ff);
+    
+    top: 0;
+    width: 100%;
+
+    
+}
+.promo-title
+{
+    font-size:50px;
+    font-weight:600;
+    margin-top:80px;
+    color:#000000;
+    padding-left: 5%;
+}
+.pp
+{
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
+    padding-left: 60%;
+    
+
+}

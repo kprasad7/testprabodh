@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+
+  <title></title>
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+  <center>
+    <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
+  </center>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    
+    <p class="lead">Mopuri Jagan Rao : Founder
+
+Mopuri Jagan Rao hails from India and moved to USA in late nineties. He got his Masters in Engineering from Indian Institute of Technology, Kharagpur, India and started his career as Software Engineering and currently working as Software Engineering Manager at Intel Corporation, California, USA.
+
+ 
+
+Jagan is very passionate about kids education and social service. He believes that with the use of technology one can make a significant impact on society with a relatively little effort. With that in mind, he founded this non-profit organization called Prabodh to help underprivileged kids find and follow a path to greater success in education.</p>
+    <hr class="my-4">
+    <p>Explore our Website.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+    </p>
+  </div>
+
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>

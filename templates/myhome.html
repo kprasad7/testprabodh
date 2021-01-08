@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+  <div class="loader"></div>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Prabodh</title>
+  </head>
+  <body>
+  
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/tandus.css" %}"/>
+    <div class="oo">
+     <nav class="navbar navbar-expand-lg navbar-light"style="background:transparent;">
+     <meta charset="utf-8">
+    <title></title>
+    </style>  
+     <a class="navbar-brand" href="#" ></a><img src="{% static "image/logo.png" %}" style="width:8%;">
+      <h2><font face = "Comic sans MS" size =" 10">&nbsp;&nbsp;Prabodh</font></h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url "studentclick" %}" style="color:#000000;"><font face = "Comic sans MS" size =" 4">Student</font> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "teacherclick" %}"style="color:#000000;"><font face = "Comic sans MS" size =" 4">Teacher</font></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"style="color:#000000;"><font face = "Comic sans MS" size =" 4">Admin</font></a>
+      </li>
+      
+    </ul>
+  </div>
+  </nav>
+  </div>
+    {% block content %}
+    {% endblock content %}
+</head> 
+<section id="banner">
+<div class="container">
+ <div class="row">
+  <div class="col-md-6">
+   <p class="promo-title"><font face = "Comic sans MS" size =" 10">Welcome to Prabodh</font></p>
+   <br>
+   <p style="padding-left:4%;font-style: italic;"><a href='#'><img class="bg-img" src="{% static "image/botton.png" %}" style="width:10%;"alt="background image"></a>watch&nbsp;&nbsp;</p>
+   </br>
+  </div>
+  <div class="col-md-6">
+  <link rel="stylesheet" href="{% static "css/tandus.css" %}"/>
+  <section class="pp">
+    <div class="float-right;">
+     <img src="{% static "image/g3.jpg" %}"style="width:130%;">
+    </div>
+  </section>
+   </div> 
+  </div>
+ </div>
+</div>
+ <img src="{% static "image/wave.png" %}" style="width:100%;">
+<!--#################-->
+
+
+
+<!--footer-->
+<style>
+    /*---------------------------------------
+   Social section
+-----------------------------------------*/
+    footer {
+      padding: 0px 0px 0px 0px;
+      background-color: #9900ff;
+      margin: 0px;
+    
+      
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 23px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      margin: 7px 2px;
+      border-radius: 30%;
+    }
+
+    .fa:hover {
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+
+
+    p {
+      text-align: center;
+
+    }
+  </style>
+<br><br><br>
+
+<link rel="stylesheet" href="{% static "css/tandus.css" %}"/>
+<footer>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+        <br>
+          <p>Terms<br>
+            Copyright &copy; Prabodh Education Organisation 2021 </p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
+
+ </section>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn prabodhh.wsgi --log-file -
