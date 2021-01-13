@@ -4,7 +4,6 @@
 
 <head>
   <meta charset="utf-8">
- 
 
   <style media="screen">
     a:link {
@@ -39,7 +38,7 @@
 
     .logout_btn {
       padding: 5px;
-      background: #19B3D3;
+      background: #e62e00;
       text-decoration: none;
       float: right;
       margin-top: -30px;
@@ -156,8 +155,8 @@
 
 </head>
 
-<body>
-
+<body style =
+"background-image: url({% static "image/background.jpg" %})">
   <input type="checkbox" id="check">
   <!--header area start-->
   <header>
@@ -175,9 +174,6 @@
   <!--sidebar start-->
   <div class="sidebar">
     <center>
-      {% for t in teachers %}
-       <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="60px" width="70px" />
-      {% endfor %}
       <h4>{{request.user.first_name}}</h4>
       <h6 style="color: rgb(255, 255, 255);">( Teacher )</h6>
 
@@ -186,8 +182,10 @@
     <a href="/teacher/teacher-dashboard"><i class="fa fa-dashcube" aria-hidden="true"></i><span>Pannel</span></a>
     <a href="/teacher/teacher-exam"><i class="fa fa-pencil" aria-hidden="true"></i></i><span><font face = "Comic sans MS" size =" 3">Exams</font></span></a>
     <a href="/teacher/teacher-question"><i class="fa fa-pencil" aria-hidden="true"></i><span>Questions</span></a>
-    <a href="/teacher/utube"></i><span>Add Youtube Url </span></a>
-    <a href="/teacher/nutube"></i><span>Add Drive Url </span></a>
+    <a href="/teacher/utube"><i class="fa fa-pencil" aria-hidden="true"></i><span>Add Youtube Url</span></a>
+    <a href="/teacher/nutube"><i class="fa fa-pencil" aria-hidden="true"></i><span>Add Drive Url</span></a>
+    <a href="/teacher/uvideo"><i class="fa fa-eye" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Youtube Tutorials</font></span></a>
+    <a href="/teacher/pvideo"><i class="fa fa-eye" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Prabodh Tutorials</font></span></a>
   </div>
   <!--sidebar end-->
 

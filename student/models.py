@@ -11,6 +11,9 @@ class Studentt(models.Model):
     def get_name(self):
         return self.user.first_name+" "+self.user.last_name
     @property
+    def get_profile(self):
+        return self.profile_pic    
+    @property
     def get_instance(self):
         return self
     def __str__(self):

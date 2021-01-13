@@ -32,9 +32,9 @@
         <tr>
 
           <th>Name</th>
+          <th>Profile Picture</th>
           <th>Mobile</th>
           <th>Address</th>
-         
           <th>Update</th>
           <th>Delete</th>
         </tr>
@@ -43,6 +43,7 @@
       <tr>
 
         <td> {{t.get_name}}</td>
+        <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
         <td>{{t.mobile}}</td>
         <td>{{t.address}}</td>
         

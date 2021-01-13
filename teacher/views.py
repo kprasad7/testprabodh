@@ -9,9 +9,8 @@ from datetime import date, timedelta
 from quiz import models as QMODEL
 from student import models as SMODEL
 from quiz import forms as QFORM
-from teddy.models import Video , extra
-from teddy.forms import nurlform
-from lvid.forms import yurlformm
+from teddy.models import Video , extra , Drive
+from teddy.forms import nurlform,yurlform
 from .models import Teacher
 from django.contrib import messages
 
@@ -138,7 +137,7 @@ def remove_question_view(request,pk):
 @user_passes_test(is_teacher)
 def yuurlformm(request):
     if request.method == "POST":
-        form =  yurlformm(request.POST)
+        form =  yurlform(request.POST)
         if form.is_valid():
             form.save()
         else:
@@ -161,4 +160,14 @@ def drivetubeurl(request):
         return HttpResponseRedirect('nutube')
     return render(request,'teacher/teacher-nutube.html')
 
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def pvideo(request):
+    data=Drive.objects.all()
+    return render(request, 'teacher/teacher-pvideo.html',{'kk':data})
 
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def uvideo(request):
+    data=extra.objects.all()
+    return render(request, 'teacher/teacher-uvideo.html',{'kkk':data})

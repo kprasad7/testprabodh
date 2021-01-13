@@ -20,5 +20,7 @@ path('see-question/<int:pk>', views.see_question_view,name='see-question'),
 path('remove-question/<int:pk>', views.remove_question_view,name='remove-question'),
 path('utube', views.yuurlformm,name='yuurlformm'),
 path('nutube', views.drivetubeurl,name='drivetubeurl'),
+path('pvideo', views.pvideo,name='pvideo'),
+path('uvideo', views.uvideo,name='uvideo'),
 
 ]

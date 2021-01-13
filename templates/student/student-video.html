@@ -71,11 +71,15 @@
     </style>
   </head>
 <br><br>
-<div style="padding-left:3%;">
-  {% for i in obj %}
-  {% video i.video '280 x 200 pixels'%}
-  {% endfor %}
-</div>
+{% for q in klk%}
+<center>
+<br>
+ <iframe width="400" height="300"
+  src="{{q.ename}}">
+</iframe>
+</center>
+{% endfor %}
+
 <br><br><br><br><br><br><br><br><br><br>
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>

@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
- 
 
   <style media="screen">
     a:link {
@@ -39,7 +39,7 @@
 
     .logout_btn {
       padding: 5px;
-      background: #19B3D3;
+      background: #cccc00;
       text-decoration: none;
       float: right;
       margin-top: -30px;
@@ -57,12 +57,12 @@
     }
 
     .sidebar {
-      background: #9900ff;
+      background:  #9900ff;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
-      left: 0;
-      width: 230px;
+      padding-left: 20px;
+      width: 250px;
       height: 100%;
       transition: 0.5s;
       transition-property: left;
@@ -87,7 +87,7 @@
       width: 100%;
       line-height: 60px;
       text-decoration: none;
-      padding-left: 10px;
+      padding-left: 30px;
       box-sizing: border-box;
       transition: 0.5s;
 
@@ -98,7 +98,7 @@
     }
 
     .sidebar i {
-      padding-right: 10px;
+      padding-right: 20px;
     }
 
     label #sidebar_btn {
@@ -107,6 +107,7 @@
       position: fixed;
       cursor: pointer;
       left: 300px;
+      padding-left: 9px;
       font-size: 20px;
       margin: 5px 0;
       transition: 0.5s;
@@ -127,7 +128,7 @@
 
     #check:checked~.sidebar a {
       font-size: 20px;
-      margin-left: 170px;
+      margin-left: 150px;
       width: 80px;
     }
 
@@ -155,16 +156,16 @@
 
 </head>
 
-<body>
-
+<body style =
+"background-image: url({% static "image/bgs.jpg" %})">
   <input type="checkbox" id="check">
   <!--header area start-->
   <header>
     <label for="check">
-      <i style="left: 160px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
+      <i style="left: 170px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <h3><font face = "Comic sans MS" size ="3">Prabodh Quiz</font></h3>
+      <h3><font face = "Comic sans MS" size =" 4">Prabodh Quiz</font></h3>
     </div>
     <div class="right_area">
       <a href="/logout" class="logout_btn">Logout</a>
@@ -174,13 +175,14 @@
   <!--sidebar start-->
   <div class="sidebar">
     <center>
-      
-      {% for t in students %}
-       <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="60px" width="70px" />
-      {% endfor %}
+    
       <h4>{{request.user.first_name}}</h4>
+      
+      
+       <img src="{% static stud.profile_pic.url %}" style=" width:50px;height:40px;">
+      
       <h6 style="color: rgb(255, 255, 255);">( Student )</h6>
-
+    
     </center>
 
     <a href="/student/student-dashboard"><i class="fa fa-dashcube" aria-hidden="true"></i></i><span><font face = "Comic sans MS" size =" 3">Pannel</font></span></a>
@@ -204,6 +206,11 @@
     {% include "quiz/footer.html" %}
   </div>
   <!--content end-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css>  
 </body>
 
 </html>
