@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
   <head>
   <div class="loader"></div>
@@ -27,42 +26,37 @@
        <span class="navbar-toggler-icon"></span>
       </button>
   
-      
+  
+  
   {% if user.is_authenticated %}
       <div class="form-inline  my-3 my-lg-0 ml-auto">
-      
-       {% for group in user.groups.all %}
-         {% if group.name == 'student' %}
-           <li class="nav-item active">
-            <a class="nav-link" href="{% url "student-dashboard" %}" style="color:#000000;"><font face = "Comic sans MS" size =" 4">student-Dashboard</font> <span class="sr-only">(current)</span></a>
-          </li> 
-          
-            
-         {% endif %}
-        {% endfor %}    
-       {% for group in user.groups.all %}
-         {% if group.name != 'teacher' %}
-           <li class="nav-item active">
-            <a class="nav-link" href="{% url "teacher-dashboard" %}" style="color:#000000;"><font face = "Comic sans MS" size =" 4">teacher-Dashboard</font> <span class="sr-only">(current)</span></a>
-          </li> 
-          
-            
-         {% endif %}
-        {% endfor %}               
+  
          {% if user.is_superuser %}
-           <li class="nav-item active">
-            <a class="nav-link" href="{% url "admin-dashboard" %}" style="color:#000000;"><font face = "Comic sans MS" size =" 4">admin-Dashboard</font> <span class="sr-only">(current)</span></a>
-          </li> 
+           <a href = "{% url 'admin-dashboard'%}">
+             <button class="btn btn-warning  my-2 my-sm-0" type="submit"><font face = "Comic sans MS" size ="4">Admin-Dashboard</font></button>
+           </a> 
           
             
          {% endif %}
-                
-         
-                     
-                  
-           <div class="text-white bg-dark mr-2 ">Logged as in {{user.username}}</div>
+
+         {% load user_tags %}
+        
+         {% if request.user|has_group:"STUDENT" %}
+           <a href = "{% url 'student-dashboard'%}">
+             <button class="btn btn-warning  my-2 my-sm-0" type="submit"><font face = "Comic sans MS" size ="4">Student-Dashboard</font></button>
+           </a> 
+         {% endif %} 
+
+        
+         {% if request.user|has_groupp:"TEACHER" %}
+           <a href = "{% url 'teacher-dashboard'%}">
+             <button class="btn btn-warning  my-2 my-sm-0" type="submit"><font face = "Comic sans MS" size ="4">Teacher-Dashboard</font></button>
+           </a> 
+         {% endif %} 
+          &nbsp;&nbsp;
+           <div class="text-white bg-dark mr-2 "><font face = "Comic sans MS" size ="4">Logged as in {{user.username}}</font></div>
            <a href = "{% url 'logout'%}">
-             <button class="btn btn-primary  my-2 my-sm-0" type="submit">Logout</button>
+             <button class="btn btn-danger  my-2 my-sm-0" type="submit">Logout</button>
            </a> 
          
         

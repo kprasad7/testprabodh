@@ -90,6 +90,9 @@
         </div>
     </div>
 </div>
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
 <br><br><br><br><br>
 {% include "quiz/footer.html" %}
   </body>

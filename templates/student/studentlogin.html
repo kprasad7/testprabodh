@@ -88,8 +88,11 @@
         </div>
     </div>
     </div>
+<br><br><br><br><br><br>    
 </div>
-<br><br><br><br><br><br>
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
 {% include "quiz/footer.html" %}
   </body>
 </html>
