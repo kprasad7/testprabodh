@@ -136,7 +136,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
+  #'/var/www/static/',
+]
 
 STATICFILES_DIRS=[
 STATIC_DIR,
@@ -161,14 +163,6 @@ EMAIL_RECEIVING_USER = ['jayalaxme24@gmail.com'] # email on which you will recei
 
 
 
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 django_heroku.settings(locals())
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
