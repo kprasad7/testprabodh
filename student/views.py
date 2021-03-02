@@ -163,70 +163,70 @@ def pvideo(request):
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def prabodhclassview(request):
-    return render(request , "student/classmain.html")    
+    return render(request , "student/classmains.html")    
 ###################################################prabodh class view##################################    
 
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demov(request):
     data= sixth.objects.all()
-    return render(request, 'student/demov.html',{'ml':data})
+    return render(request, 'student/demovs.html',{'mls':data})
 
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demoview(request,pk):
     data = sixth.objects.all().filter(id=pk)
-    return render(request,'student/demoview.html',{"qqq":data})
+    return render(request,'student/demoviews.html',{"qqqs":data})
 ###########################################1################################
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demov1(request):
     data= sevennn.objects.all()
-    return render(request, 'student/demov1.html',{'m1':data})
+    return render(request, 'student/demov1s.html',{'m1s':data})
 
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demoview1(request,pk):
     data = sevennn.objects.all().filter(id=pk)
-    return render(request,'student/demoview1.html',{"q1":data})    
+    return render(request,'student/demoview1s.html',{"q1s":data})    
 #################################2#################################
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demov2(request):
     data= eightn.objects.all()
-    return render(request, 'student/demov2.html',{'m2':data})
+    return render(request, 'student/demov2s.html',{'m2s':data})
 
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demoview2(request,pk):
     data = eightn.objects.all().filter(id=pk)
-    return render(request,'student/demoview2.html',{"q2":data})    
+    return render(request,'student/demoview2s.html',{"q2s":data})    
 ############################3###############################3###########
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demov3(request):
     data= nine.objects.all()
-    return render(request, 'student/demov3.html',{'m3':data})
+    return render(request, 'student/demov3s.html',{'m3s':data})
 
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demoview3(request,pk):
     data = nine.objects.all().filter(id=pk)
-    return render(request,'student/demoview3.html',{"q3":data})    
+    return render(request,'student/demoview3s.html',{"q3s":data})    
 ##############################4####################################
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def demov4(request):
     data= tennn.objects.all()
-    return render(request, 'student/demov4.html',{'m4':data})
+    return render(request, 'student/demov4s.html',{'m4s':data})
 
 
 def demoview4(request,pk):
     data = tennn.objects.all().filter(id=pk)
-    return render(request,'student/demoview4.html',{"q4":data}) 
+    return render(request,'student/demoview4s.html',{"q4s":data}) 
 
 def future(request):
-   return render(request,'student/future.html')
+   return render(request,'student/futures.html')
 ################################################################################    
 
 def complete_task(request , task_id):

@@ -39,7 +39,9 @@
 <div class="container">
   <div class="panel panel-danger">
     <div class="panel-heading">
-      <h6 class="panel-title">9th class</h6>
+    <center>
+      <h5 class="panel-title">7th class</h5>
+    </center>  
       <tr>
         <center>
           <th>Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -52,13 +54,13 @@
     <table class="table table-hover" id="dev-table">
       <thead>
       </thead>
-      {% for t in m4 %}
+      {% for t in m1s %}
       <tr>
 
-        <td> {{t.ten}}</td>
+        <td> {{t.sev}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
         
         
-        <td><a <i class="fa fa-eye" aria-hidden="true" href="{% url 'demoview4' t.id  %}"></i></a></td>
+        <td><a style="padding-left:40%;"<i class="fa fa-eye" aria-hidden="true" href="{% url 'demoview1' t.id  %}"></i></a></td>
       </tr>
       {% endfor %}
     </table>
