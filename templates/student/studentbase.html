@@ -19,7 +19,7 @@
 
     header {
       position: fixed;
-      background: #9900ff;
+      background: linear-gradient(to right, #001f3f,#001f3f);
       padding: 20px;
       width: 100%;
       z-index: 1;
@@ -39,7 +39,7 @@
 
     .logout_btn {
       padding: 5px;
-      background: #cccc00;
+      background: #FFDC00;
       text-decoration: none;
       float: right;
       margin-top: -30px;
@@ -53,11 +53,11 @@
     }
 
     .logout_btn:hover {
-      background: #0B87A6;
+      background: #FF4136;
     }
 
     .sidebar {
-      background:  #9900ff;
+      background:  #001f3f;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
@@ -155,9 +155,9 @@
 
 
 </head>
-
-<body style =
-"background-image: url({% static "image/bgs.jpg" %})">
+<!--style =
+"background-image: url({% static "image/bgs.jpg" %})"-->
+<body style="background-color:#DDDDDD;">
   <input type="checkbox" id="check">
   <!--header area start-->
   <header>
@@ -165,7 +165,7 @@
       <i style="left: 170px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <h3><font face = "Comic sans MS" size =" 4">Prabodh Quiz</font></h3>
+      <h3><font face = "Comic sans MS" size =" 4">Prabodh</font></h3>
     </div>
     <div class="right_area">
       <a href="/logout" class="logout_btn">Logout</a>
@@ -185,11 +185,11 @@
     
     </center>
 
-    <a href="/student/student-dashboard"><i class="fa fa-dashcube" aria-hidden="true"></i></i><span><font face = "Comic sans MS" size =" 3">Pannel</font></span></a>
-    <a href="/student/student-exam"><i class="fa fa-pencil" aria-hidden="true"></i></i><span><font face = "Comic sans MS" size =" 3">Exams</font></span></a>
-    <a href="/student/student-marks"><i class="fa fa-check" aria-hidden="true"></i></i><span><font face = "Comic sans MS" size =" 3">Marks</font></span></a>
-    <a href="/student/student-video"><i class="fa fa-eye" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Youtube Tutorials</font></span></a>
-    <a href="/student/student-pvideo"><i class="fa fa-eye" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Prabodh Tutorials</font></span></a>
+    <a href="/student/student-dashboard"><i class="fa fa-dashcube" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Pannel</span></font></a>
+    <a href="/student/student-exam"><i class="fa fa-pencil" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Exams</font></span></a>
+    <a href="/student/student-marks"><i class="fa fa-check" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Marks</font></span></a>
+    <a href="/student/student-video"><i class="fa fa-youtube" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Youtube Tutorials</font></span></a>
+    <a href="/student/pview"><i class="fa fa-pinterest-p" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Prabodh Tutorials</font></span></a>
   </div>
   <!--sidebar end-->
 
@@ -201,9 +201,6 @@
 
     {% endblock content %}
 
-
-    <br><br><br><br><br><br>
-    {% include "quiz/footer.html" %}
   </div>
   <!--content end-->
 

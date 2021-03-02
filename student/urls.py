@@ -18,5 +18,21 @@ path('student-marks', views.student_marks_view,name='student-marks'),
 path('student-video', views.video,name='video'),
 path('student-pvideo', views.pvideo,name='pvideo'),
 
+path('pview', views.prabodhclassview,name='pview'),
+path('demov' , views.demov , name="demov"),
+path('demov1' , views.demov1 , name="demov1"),
+path('demov2' , views.demov2 , name="demov2"),
+path('demov3' , views.demov3 , name="demov3"),
+path('demov4' , views.demov4 , name="demov4"),
+path('demoview/<int:pk>' , views.demoview , name="demoview"),
+path('demoview1/<int:pk>' , views.demoview1 , name="demoview1"),
+path('demoview2/<int:pk>' , views.demoview2 , name="demoview2"),
+path('demoview3/<int:pk>' , views.demoview3 , name="demoview3"),
+path('demoview4/<int:pk>' , views.demoview4 , name="demoview4"),
+path('future/' , views.future , name="future"),
+
+path("complete/<task_id>", views.complete_task , name="complete"),
+path("incomplete/<task_id>" , views.pending_task , name="incomplete"),
+
 
 ]

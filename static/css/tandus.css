@@ -2,14 +2,14 @@
 #banner
 {
 
-  background: #9900ff;
+  background:#9900ff;
   
 
 }
 .oo
 {
-    background-image: linear-gradient(to right,  #9900ff, #9900ff);
-    
+    background-image: linear-gradient(to right, #9900ff, #9900ff);
+
     top: 0;
     width: 100%;
 
@@ -20,8 +20,14 @@
     font-size:50px;
     font-weight:600;
     margin-top:80px;
-    color:#000000;
+    color:#FFDC00;
     padding-left: 5%;
+}
+.mk{
+    color:#f5f4f1;
+}
+.kl{
+    color:#FFDC00;
 }
 .pp
 {

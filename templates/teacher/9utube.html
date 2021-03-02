@@ -1,0 +1,47 @@
+{% extends 'teacher/teacherbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+{% if messages %}
+  {% for msg in messages %}
+  <center>
+    <div class="alert alert-danger" role="alert">
+      {{msg}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>  
+  </center>  
+  {% endfor %}
+{% endif %} 
+<br><br>
+<h2 style="text-align:center; color:red;">ADD DRIVE LINK FOR 9TH CLASS </h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+  <div class="form-group">
+    <label for="exampleInputPassword1">Link Name</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="url " name="nine">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Link Url</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="url name" name="ninen">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<br><br><br>
+{% endblock content %}

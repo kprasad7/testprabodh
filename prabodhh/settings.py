@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'embed_video',
     "lvid",
-    
+    "pclass",
+    "history",
 ]
 
 MIDDLEWARE = [
@@ -167,3 +168,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 django_heroku.settings(locals())
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 MEDIA_URL = "/media/"
+

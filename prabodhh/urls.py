@@ -27,6 +27,7 @@ urlpatterns = [
     path("",include("teddy.urls")),
     path('teacher/',include('teacher.urls')),
     path('student/',include('student.urls')),
+    path('syllabus/',include('lvid.urls')),
     
 
 
@@ -68,7 +69,12 @@ urlpatterns = [
     path('admin-view-question', views.admin_view_question_view,name='admin-view-question'),
     path('view-question/<int:pk>', views.view_question_view,name='view-question'),
     path('delete-question/<int:pk>', views.delete_question_view,name='delete-question'),
-
+    path('admin-utube', views.avideo,name='avideo'),
+    path('admin-pvideo', views.apvideo,name='apvideo'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+from django.conf.urls import handler404, handler500, handler403, handler400
+from prabodhh import views
+
+handler404 = 'prabodhh.views.handler404'

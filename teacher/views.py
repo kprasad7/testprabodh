@@ -13,6 +13,8 @@ from teddy.models import Video , extra , Drive
 from teddy.forms import nurlform,yurlform
 from .models import Teacher
 from django.contrib import messages
+from pclass.forms import sixform , sevform , eigform ,nineform , tenform , spform ,enform, labform
+from pclass.models import sixth , sevennn , eightn , nine , tennn ,spnn , labbb ,envvv
 
 #for showing signup/login button for teacher
 def teacherclick_view(request):
@@ -146,7 +148,105 @@ def yuurlformm(request):
         return HttpResponseRedirect('utube')
     return render(request,'teacher/teacher-utube.html')
 
+############################class form #########################
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def tenurl(request):
+    if request.method == "POST":
+        form =  tenform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("10thclass")
+    return render(request,'teacher/10utube.html')
 
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def nineurl(request):
+    if request.method == "POST":
+        form =  nineform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("9thclass")
+    return render(request,'teacher/9utube.html')
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def eigurl(request):
+    if request.method == "POST":
+        form =  eigform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("8thclass")
+    return render(request,'teacher/8utube.html')
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def sevurl(request):
+    if request.method == "POST":
+        form =  sevform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("7thclass")
+    return render(request,'teacher/7utube.html')
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def sixurl(request):
+    if request.method == "POST":
+        form =  sixform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("6thclass")
+    return render(request,'teacher/6utube.html')
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def laburl(request):
+    if request.method == "POST":
+        form =  labform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("lab1class")
+    return render(request,'teacher/lab1.html')      
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def spurl(request):
+    if request.method == "POST":
+        form =  spform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("s1class")
+    return render(request,'teacher/s1utube.html') 
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def enurl(request):
+    if request.method == "POST":
+        form =  enform(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("form is invalid")  
+        messages.success(request, 'successfully added drive link')      
+        return HttpResponseRedirect("e1class")
+    return render(request,'teacher/e1utube.html')                             
+###################################################################################
 @login_required(login_url='teacherlogin')
 @user_passes_test(is_teacher)
 def drivetubeurl(request):
@@ -158,8 +258,8 @@ def drivetubeurl(request):
             print("form is invalid")  
         messages.success(request, 'successfully added drive link')      
         return HttpResponseRedirect('nutube')
-    return render(request,'teacher/teacher-nutube.html')
-
+    return render(request,'teacher/teacher-nutube.html')    
+###########################################################
 @login_required(login_url='teacherlogin')
 @user_passes_test(is_teacher)
 def pvideo(request):
@@ -171,3 +271,85 @@ def pvideo(request):
 def uvideo(request):
     data=extra.objects.all()
     return render(request, 'teacher/teacher-uvideo.html',{'kkk':data})
+##########################################################################view###########
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def teacherclassview(request):
+    return render(request , "teacher/classmain.html")
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def prabodhclassview(request):
+    return render(request , "teacher/prabodhclass.html")    
+###################################################prabodh class view##################################    
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def p6video(request):
+    data= sixth.objects.all()
+    return render(request, 'teacher/p6view.html',{'mm':data})
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demov(request):
+    data= sixth.objects.all()
+    return render(request, 'teacher/demov.html',{'ml':data})
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demoview(request,pk):
+    data = sixth.objects.all().filter(id=pk)
+    return render(request,'teacher/demoview.html',{"qqq":data})
+###########################################1################################
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demov1(request):
+    data= sevennn.objects.all()
+    return render(request, 'teacher/demov1.html',{'m1':data})
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demoview1(request,pk):
+    data = sevennn.objects.all().filter(id=pk)
+    return render(request,'teacher/demoview1.html',{"q1":data})    
+#################################2#################################
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demov2(request):
+    data= eightn.objects.all()
+    return render(request, 'teacher/demov2.html',{'m2':data})
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demoview2(request,pk):
+    data = eightn.objects.all().filter(id=pk)
+    return render(request,'teacher/demoview2.html',{"q2":data})    
+############################3###############################3###########
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demov3(request):
+    data= nine.objects.all()
+    return render(request, 'teacher/demov3.html',{'m3':data})
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demoview3(request,pk):
+    data = nine.objects.all().filter(id=pk)
+    return render(request,'teacher/demoview3.html',{"q3":data})    
+##############################4####################################
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demov4(request):
+    data= tennn.objects.all()
+    return render(request, 'teacher/demov4.html',{'m4':data})
+
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def demoview4(request,pk):
+    data = tennn.objects.all().filter(id=pk)
+    return render(request,'teacher/demoview4.html',{"q4":data})    
+##################################future####################
+def future(request):
+   return render(request,'teacher/future.html')
+    

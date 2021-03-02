@@ -12,7 +12,8 @@ from student import models as SMODEL
 from teddy.forms import yurlform
 from teddy.models import Item, Drive , extra
 from lvid.models import Itemm
-
+from pclass.models import sixth , sevennn , eightn , nine , tennn ,spnn , labbb ,envvv
+from django.contrib import messages
 
 def studentclick_view(request):
     if request.user.is_authenticated:
@@ -157,4 +158,89 @@ def pvideo(request):
     stud=SMODEL.Studentt.objects.get(user_id=request.user.id)
     return render(request, 'student/student-pvideo.html',{'kk':data,"stud":stud})    
 
+#################################################################################
 
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def prabodhclassview(request):
+    return render(request , "student/classmain.html")    
+###################################################prabodh class view##################################    
+
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demov(request):
+    data= sixth.objects.all()
+    return render(request, 'student/demov.html',{'ml':data})
+
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demoview(request,pk):
+    data = sixth.objects.all().filter(id=pk)
+    return render(request,'student/demoview.html',{"qqq":data})
+###########################################1################################
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demov1(request):
+    data= sevennn.objects.all()
+    return render(request, 'student/demov1.html',{'m1':data})
+
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demoview1(request,pk):
+    data = sevennn.objects.all().filter(id=pk)
+    return render(request,'student/demoview1.html',{"q1":data})    
+#################################2#################################
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demov2(request):
+    data= eightn.objects.all()
+    return render(request, 'student/demov2.html',{'m2':data})
+
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demoview2(request,pk):
+    data = eightn.objects.all().filter(id=pk)
+    return render(request,'student/demoview2.html',{"q2":data})    
+############################3###############################3###########
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demov3(request):
+    data= nine.objects.all()
+    return render(request, 'student/demov3.html',{'m3':data})
+
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demoview3(request,pk):
+    data = nine.objects.all().filter(id=pk)
+    return render(request,'student/demoview3.html',{"q3":data})    
+##############################4####################################
+@login_required(login_url='studentlogin')
+@user_passes_test(is_student)
+def demov4(request):
+    data= tennn.objects.all()
+    return render(request, 'student/demov4.html',{'m4':data})
+
+
+def demoview4(request,pk):
+    data = tennn.objects.all().filter(id=pk)
+    return render(request,'student/demoview4.html',{"q4":data}) 
+
+def future(request):
+   return render(request,'student/future.html')
+################################################################################    
+
+def complete_task(request , task_id):
+    task = sixth.objects.get(pk=task_id) 
+    if task.six == request.user:
+        task.done = True
+        task.save()
+    else: 
+         messages.error(request,('Access Restricted You not allowed!')) 
+    
+    return redirect('demov' , {"mkk":task})
+
+def pending_task(request , task_id):
+    task = sixth.objects.get(pk=task_id)
+    task.done = False
+    task.save()
+    return redirect('demov')    

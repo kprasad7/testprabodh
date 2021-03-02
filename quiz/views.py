@@ -13,6 +13,7 @@ from student import models as SMODEL
 from teacher import forms as TFORM
 from student import forms as SFORM
 from django.contrib.auth.models import User
+from teddy.models import Item, Drive , extra
 
 
 
@@ -294,3 +295,12 @@ def contactus_view(request):
     return render(request, 'quiz/contactus.html', {'form':sub})
 
 
+@login_required(login_url='adminlogin')
+def avideo(request):
+    data=extra.objects.all()
+    return render(request, 'quiz/admin-uvideo.html',{'klk':data})
+
+@login_required(login_url='adminlogin')
+def apvideo(request):
+    data =Drive.objects.all()
+    return render(request, 'quiz/admin-video.html',{'kk':data})    

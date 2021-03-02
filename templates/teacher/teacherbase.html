@@ -4,6 +4,7 @@
 
 <head>
   <meta charset="utf-8">
+  
 
   <style media="screen">
     a:link {
@@ -18,7 +19,7 @@
 
     header {
       position: fixed;
-      background: #9900ff;
+      background: #85144b;
       padding: 20px;
       width: 100%;
       z-index: 1;
@@ -56,7 +57,7 @@
     }
 
     .sidebar {
-      background:  #9900ff;
+      background:  #85144b;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
@@ -71,7 +72,7 @@
       width: 100px;
       height: 100px;
       border-radius: 100px;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
     }
 
     .sidebar h4 {
@@ -155,8 +156,7 @@
 
 </head>
 
-<body style =
-"background-image: url({% static "image/background.jpg" %})">
+<body>
   <input type="checkbox" id="check">
   <!--header area start-->
   <header>
@@ -164,7 +164,7 @@
       <i style="left: 170px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <h3><font face = "Comic sans MS" size =" 4">Prabodh Quiz</font></h3>
+      <h3><font face = "Comic sans MS" size =" 4">Prabodh</font></h3>
     </div>
     <div class="right_area">
       <a href="/logout" class="logout_btn">Logout</a>
@@ -179,13 +179,13 @@
 
     </center>
 
-    <a href="/teacher/teacher-dashboard"><i class="fa fa-dashcube" aria-hidden="true"></i><span>Pannel</span></a>
-    <a href="/teacher/teacher-exam"><i class="fa fa-pencil" aria-hidden="true"></i></i><span><font face = "Comic sans MS" size =" 3">Exams</font></span></a>
-    <a href="/teacher/teacher-question"><i class="fa fa-pencil" aria-hidden="true"></i><span>Questions</span></a>
-    <a href="/teacher/utube"><i class="fa fa-pencil" aria-hidden="true"></i><span>Add Youtube Url</span></a>
-    <a href="/teacher/nutube"><i class="fa fa-pencil" aria-hidden="true"></i><span>Add Drive Url</span></a>
-    <a href="/teacher/uvideo"><i class="fa fa-eye" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Youtube Tutorials</font></span></a>
-    <a href="/teacher/pvideo"><i class="fa fa-eye" aria-hidden="true"></i><span><font face = "Comic sans MS" size =" 3">Prabodh Tutorials</font></span></a>
+    <a href="/teacher/teacher-dashboard"><img src="https://img.icons8.com/fluent/48/000000/dashboard-layout.png"/><span>Pannel</span></a>
+    <a href="/teacher/teacher-exam"><img src="https://img.icons8.com/officel/50/000000/test-passed.png"/><span><font face = "Comic sans MS" size =" 3">Exams</font></span></a>
+    <a href="/teacher/teacher-question"><img src="https://img.icons8.com/plasticine/50/000000/question-mark.png"/><span>Questions</span></a>
+    <a href="/teacher/utube"><img src="https://img.icons8.com/color/50/000000/shorten-urls.png"/><span>Add Youtube Url</span></a>
+    <a href="/teacher/tview"><img src="https://img.icons8.com/clouds/50/000000/google-drive.png"/><span>Add Drive Url</span></a>
+    <a href="/teacher/uvideo"><img src="https://img.icons8.com/plasticine/50/000000/youtube-tourtials.png"/><span><font face = "Comic sans MS" size =" 3">Youtube Tutorials</font></span></a>
+    <a href="/teacher/pview"><img src="https://img.icons8.com/doodle/50/000000/webcam-man.png"/><span><font face = "Comic sans MS" size =" 3">Prabodh Tutorials</font></span></a>
   </div>
   <!--sidebar end-->
 
@@ -197,16 +197,14 @@
 
     {% endblock content %}
 
-
-    <br><br><br><br><br><br>
-    {% include "quiz/footer.html" %}
   </div>
   <!--content end-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css>  
+    <link rel="stylesheet" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css> 
+     <script src="https://maxst.icons8.com/vue-static/landings/animated-icons/icons/eye/eye.json">
 </body>
 
 </html>

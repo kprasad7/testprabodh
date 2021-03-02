@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to right,  #aaff80, #ff99ff)
+    
 }
 
 
@@ -31,7 +31,7 @@
 }
 .box
 {
-    background: #b3b3b3;
+    background: #ffff;
 }
 
 .box h1 {
@@ -43,26 +43,26 @@
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
     width: 300px;
-    border-color: #2ecc71
+    border-color: #2ecc71;
 }
 
 .box input[type="submit"] {
     border: 0;
-    background: none;
+    background: #2ecff;
     display: block;
     margin: 20px auto;
     text-align: center;
     border: 2px solid #2ecc71;
     padding: 14px 40px;
     outline: none;
-    color: white;
+    color: #2ecc71;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer
 }
 
 .box input[type="submit"]:hover {
-    background: #2ecc71
+    background: #ff66;
 }
 
 
@@ -91,9 +91,16 @@
     </div>
 </div>
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<center>
+<h2>Your username and password didn't match. Please try again.</h2>
+</center>
 {% endif %}
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
 {% include "quiz/footer.html" %}
   </body>
 </html>
