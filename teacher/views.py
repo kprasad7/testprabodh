@@ -298,7 +298,7 @@ def demov(request):
 
 @login_required(login_url='teacherlogin')
 @user_passes_test(is_teacher)
-def demoviewsv(request,pk):
+def demoview(request,pk):
     data = sixth.objects.all().filter(id=pk)
     return render(request,'teacher/demoview.html',{"qqq":data})
 ###########################################1################################
