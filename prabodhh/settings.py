@@ -166,6 +166,6 @@ EMAIL_RECEIVING_USER = ['sunkarasita1987@gmail.com'] # email on which you will r
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 django_heroku.settings(locals())
-MEDIA_ROOT = os.path.join(BASE_DIR,"media")
-MEDIA_URL = "/media/"
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"media/")
 

@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 #####
-
+from django.conf import settings
 from django.urls import path,include
 from django.contrib import admin
 from quiz import views
@@ -73,6 +73,9 @@ urlpatterns = [
     path('admin-pvideo', views.apvideo,name='apvideo'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 from django.conf.urls import handler404, handler500, handler403, handler400
 from prabodhh import views
