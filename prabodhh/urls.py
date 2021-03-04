@@ -72,8 +72,5 @@ urlpatterns = [
     path('admin-utube', views.avideo,name='avideo'),
     path('admin-pvideo', views.apvideo,name='apvideo'),
 
-] 
-
-urlpatterns = [
-    # ... the rest of your URLconf goes here ...
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
