@@ -72,12 +72,8 @@ urlpatterns = [
     path('admin-utube', views.avideo,name='avideo'),
     path('admin-pvideo', views.apvideo,name='apvideo'),
 
+] 
+
+urlpatterns = [
+    # ... the rest of your URLconf goes here ...
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
-
-from django.conf.urls import handler404, handler500, handler403, handler400
-from prabodhh import views
-
-handler404 = 'prabodhh.views.handler404'

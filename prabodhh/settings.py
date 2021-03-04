@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "lvid",
     "pclass",
     "history",
+    
 ]
 
 MIDDLEWARE = [
