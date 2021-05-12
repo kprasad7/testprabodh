@@ -141,8 +141,6 @@ def admin_view_teacher_salary_view(request):
     return render(request,'quiz/admin_view_teacher_salary.html',{'teachers':teachers})
 
 
-
-
 @login_required(login_url='adminlogin')
 def admin_student_view(request):
     dict={

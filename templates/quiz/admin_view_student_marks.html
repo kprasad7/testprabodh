@@ -23,7 +23,7 @@
 </head>
 <br><br>
 <div class="container">
-  <div class="panel panel-danger">
+  <div class="panel panel-primary">
     <div class="panel-heading">
       <h6 class="panel-title">Students</h6>
     </div>
@@ -43,8 +43,7 @@
       <tr>
 
         <td> {{t.get_name}}</td>
-        <!--<td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>-->
-        
+        <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
         
         <td><a class="btn btn-primary btn-xs" href="{% url 'admin-view-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
         
