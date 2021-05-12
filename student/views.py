@@ -94,7 +94,7 @@ def start_exam_view(request,pk):
 @login_required(login_url='studentlogin')
 @user_passes_test(is_student)
 def calculate_marks_view(request):
-    
+
     if request.COOKIES.get('course_id') is not None:
         course_id = request.COOKIES.get('course_id')
         course=QMODEL.Course.objects.get(id=course_id)
