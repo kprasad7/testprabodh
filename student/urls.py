@@ -28,7 +28,7 @@ path('demoviewsv/<int:pk>' , views.demoviewsv , name="demoviewsv"),
 path('demoview1s/<int:pk>' , views.demoview1sv , name="demoview1s"),
 path('demoview2s/<int:pk>' , views.demoview2sv , name="demoview2s"),
 path('demoview3s/<int:pk>' , views.demoview3sv , name="demoview3s"),
-path('demoview4s/<int:pk>' , views.demoviewsv , name="demoview4s"),
+path('demoview4s/<int:pk>' , views.demoview4sv , name="demoview4s"),
 path('futures/' , views.futuresv , name="futures"),
 
 path("complete/<task_id>", views.complete_task , name="complete"),
