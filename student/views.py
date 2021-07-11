@@ -223,7 +223,7 @@ def demov4sv(request):
 
 def demoview4sv(request,pk):
     data = tennn.objects.all().filter(id=pk)
-    return render(request,'student/demoview4s.html',{"q4s":data}) 
+    return render(request,'student/demoview4s.html',{"q4":data}) 
 
 def futuresv(request):
    return render(request,'student/futures.html')
