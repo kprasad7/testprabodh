@@ -227,6 +227,9 @@ def demoview4sv(request,pk):
 
 def futuresv(request):
    return render(request,'student/futures.html')
+###################################################################################
+
+
 ################################################################################    
 
 def complete_task(request , task_id):

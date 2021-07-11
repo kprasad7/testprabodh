@@ -352,4 +352,23 @@ def demoview4(request,pk):
 ##################################future####################
 def future(request):
    return render(request,'teacher/future.html')
+###############################################################
+def delete_task(request , task_id):
+    if tennn.objects.filter(id=task_id).delete():
+        messages.success(request, 'successfully deleted  object')
+    else:
+        messages.success(request, 'unsuccessfully deleted  object')
+       
+    return render(request,'teacher/demoview4.html')
+    
+        
+      
+
+    #task = tennn.objects.get(pk=task_id)  
+    #if task.manage == request.user:
+        #task.delete()
+    #else:
+        #messages.error(request,('Access Restricted You not allowed!'))
+
+    #return render(request,'teacher/demoview4delete.html')  
     
