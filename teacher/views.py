@@ -360,15 +360,38 @@ def delete_task(request , task_id):
         messages.success(request, 'unsuccessfully deleted  object')
        
     return render(request,'teacher/demoview4.html')
-    
-        
+
+def delete_task9(request , task_id):
+    if nine.objects.filter(id=task_id).delete():
+        messages.success(request, 'successfully deleted  object')
+    else:
+        messages.success(request, 'unsuccessfully deleted  object')
+       
+    return render(request,'teacher/demov3.html')
+
+def delete_task8(request , task_id):
+    if eightn.objects.filter(id=task_id).delete():
+        messages.success(request, 'successfully deleted  object')
+    else:
+        messages.success(request, 'unsuccessfully deleted  object')
+       
+    return render(request,'teacher/demov2.html')
+
+def delete_task7(request , task_id):
+    if sevennn.objects.filter(id=task_id).delete():
+        messages.success(request, 'successfully deleted  object')
+    else:
+        messages.success(request, 'unsuccessfully deleted  object')
+       
+    return render(request,'teacher/demov1.html')            
       
+def delete_task6(request , task_id):
+    if sixth.objects.filter(id=task_id).delete():
+        messages.success(request, 'successfully deleted  object')
+    else:
+        messages.success(request, 'unsuccessfully deleted  object')
+       
+    return render(request,'teacher/demov.html')      
 
-    #task = tennn.objects.get(pk=task_id)  
-    #if task.manage == request.user:
-        #task.delete()
-    #else:
-        #messages.error(request,('Access Restricted You not allowed!'))
-
-    #return render(request,'teacher/demoview4delete.html')  
+   
     

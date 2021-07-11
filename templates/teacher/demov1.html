@@ -36,6 +36,20 @@
 
   </style>
 </head>
+{% if messages %}
+  {% for msg in messages %}
+  <center>
+    <div class="alert alert-danger" role="alert">
+      {{msg}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      <br>  
+      <a href="{% url "demov1" %}"><button type="button" class="btn btn-danger">PREVIOUS PAGE</button></a>  
+    </div>  
+  </center>  
+  {% endfor %}
+{% endif %} 
 <div class="container">
   <div class="panel panel-danger">
     <div class="panel-heading">
@@ -59,7 +73,7 @@
 
         <td> {{t.sev}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
         
-        
+        <td><a href="{% url 'delete_task7' t.id %}"><button type="button" class="btn btn-danger">Delete</button></a></td>
         <td><a style="padding-left:40%;"<i class="fa fa-eye" aria-hidden="true" href="{% url 'demoview1' t.id  %}"></i></a></td>
       </tr>
       {% endfor %}
