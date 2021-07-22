@@ -24,9 +24,12 @@
         <label for="question">Course</label>
       {% render_field questionForm.courseID|attr:'required:true' class="form-control"  %}
         <br>
-
+      <label for="upload">Add Question Image</label>
+          {% render_field questionForm.upload|attr:'required:true' class="form-control" placeholder="" %}    
+        <br>  
       <label for="question">Question</label>
       {% render_field questionForm.question|attr:'required:true' class="form-control" placeholder="What is capital of India ?" %}
+      
         <br>
       <label for="question_number">Marks</label>
       {% render_field questionForm.marks|attr:'required:true' class="form-control" placeholder="10" %}

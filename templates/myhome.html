@@ -13,7 +13,8 @@
     <script data-ad-client="ca-pub-2877679506960222" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="google-site-verification" content="HW_f8QsD-n8ZoqKv9R48KloJ1cn12CIm4F3CrnTC2Iw" />
   </head>
-  <body>
+<body>
+<div class="loader"></div>
   
     {% load static %}
     <link rel="stylesheet" href="{% static "css/tandus.css" %}"/>
@@ -118,50 +119,59 @@
     /*---------------------------------------
    Social section
 -----------------------------------------*/
-    footer {
-      padding: 0px 0px 0px 0px;
-      background-color: #9900ff;
-      margin: 0px;
+.loader {
+  border-top: 16px  #9900ff;
+  border-right: 16px #ae4f2f;
+  border-bottom: 16px #ff4a50;
+  border-bottom: 16px #f2d832;
+  border-bottom: 16px #cbff00;
+}
+
+
+  footer {
+    padding: 0px 0px 0px 0px;
+    background-color: #9900ff;
+    margin: 0px;
+  
     
-      
-    }
+  }
 
-    .fa {
-      padding: 20px;
-      font-size: 23px;
-      width: 60px;
-      text-align: center;
-      text-decoration: none;
-      margin: 7px 2px;
-      border-radius: 30%;
-    }
+  .fa {
+    padding: 20px;
+    font-size: 23px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 7px 2px;
+    border-radius: 30%;
+  }
 
-    .fa:hover {
-      opacity: 0.5;
-      text-decoration: none;
-    }
-
+  .fa:hover {
+    opacity: 0.5;
+    text-decoration: none;
+  }
 
 
-    p {
-      text-align: center;
 
-    }
-  </style>
+  p {
+    text-align: center;
+
+  }
+</style>
 <br><br><br>
 
 <link rel="stylesheet" href="{% static "css/tandus.css" %}"/>
 <footer>
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-        <br>
-          <p>Terms | Version 1.2 <br>
-            Copyright &copy; Prabodh Education Organisation 2021 </p><br>
-        </div>
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+      <br>
+        <p>Terms | Version 1.2 <br>
+          Copyright &copy; Prabodh Education Organisation 2021 </p><br>
       </div>
     </div>
   </div>
+</div>
 </footer>
 </html>
 

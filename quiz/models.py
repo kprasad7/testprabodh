@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields.files import ImageField
 
 from student.models import Studentt
 class Course(models.Model):
@@ -11,6 +12,7 @@ class Course(models.Model):
 class Question(models.Model):
     course=models.ForeignKey(Course,on_delete=models.CASCADE)
     marks=models.PositiveIntegerField()
+    upload = models.ImageField(upload_to="uploads/")
     question=models.CharField(max_length=600)
     option1=models.CharField(max_length=200)
     option2=models.CharField(max_length=200)
